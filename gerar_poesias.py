@@ -115,9 +115,13 @@ def extract_poem(path: Path) -> tuple[str, str, str]:
                     pass
                 rh = "".join(rest_html).rstrip()
                 rt = "".join(rest_txt).rstrip()
-                if rh.strip():
+                if rt.strip() and _is_dedication(rt):
                     html_lines.append(rh)
                     text_lines.append(rt)
+                elif rt.strip():
+                    # verso começa com o título: guarda a linha inteira no corpo
+                    html_lines.append(runs_html(p) if p.runs else html_escape(text))
+                    text_lines.append(text)
                 continue
             if paragraph_is_bold(p) and not AUTHOR_LINE.match(s):
                 # parágrafo inteiro em negrito: título pode vir com dedicatória
@@ -147,28 +151,42 @@ AUTHOR_LINE = re.compile(
 )
 
 
+def _remainder_after_title(plain: str, title: str) -> str | None:
+    """Se a linha começa com o título, devolve o que sobra; senão None."""
+    if sort_key(plain) == sort_key(title):
+        return ""
+    if not sort_key(plain).startswith(sort_key(title)):
+        return None
+    first = plain.split(None, 1)
+    if first and sort_key(first[0]) == sort_key(title):
+        return first[1] if len(first) > 1 else ""
+    if plain.casefold().startswith(title.casefold()):
+        return plain[len(title) :].lstrip()
+    return None
+
+
+def _is_dedication(rest: str) -> bool:
+    r = rest.lstrip()
+    return r.startswith("*") or sort_key(r).startswith("para ")
+
+
 def body_only(text: str, title: str) -> str:
-    """Tira título repetido no topo e qualquer linha só com (Ivan Rocha)."""
+    """Tira linha que é só o título (ou título + *para…). Não corta verso que começa com o título."""
     lines = text.splitlines()
     cleaned = []
-    title_k = sort_key(title)
     skipped_title = False
     for line in lines:
         s = line.strip()
-        sk = sort_key(s)
-        if not skipped_title and (sk == title_k or sk.startswith(title_k)):
-            skipped_title = True
-            rest = s
-            first = s.split(None, 1)
-            if first and sort_key(first[0]) == title_k:
-                rest = first[1] if len(first) > 1 else ""
-            elif sk.startswith(title_k):
-                rest = s[len(title):].lstrip() if s.casefold().startswith(title.casefold()) else s
-                if rest == s and first:
-                    rest = first[1] if len(first) > 1 else ""
-            if rest:
-                cleaned.append(rest)
-            continue
+        if not skipped_title:
+            rest = _remainder_after_title(s, title)
+            if rest is not None:
+                skipped_title = True
+                if rest == "" or _is_dedication(rest):
+                    if rest:
+                        cleaned.append(rest)
+                    continue
+                cleaned.append(line.rstrip())
+                continue
         if AUTHOR_LINE.match(s):
             continue
         cleaned.append(line.rstrip())
@@ -188,27 +206,20 @@ def sort_key(s: str) -> str:
 def body_only_html(html: str, title: str) -> str:
     lines = html.splitlines()
     cleaned = []
-    title_cf = title.casefold()
     skipped = False
     for line in lines:
         plain = re.sub(r"<[^>]+>", "", line).strip()
-        if not skipped and plain.casefold().startswith(title_cf):
-            skipped = True
-            rest = line
-            # tira o título do começo da linha HTML
-            idx = plain.casefold().find(title_cf)
-            if idx == 0:
-                # remove first title-length visible chars — fallback: se a linha ficou só título, drop
-                if plain.casefold() == title_cf:
+        if not skipped:
+            rest = _remainder_after_title(plain, title)
+            if rest is not None:
+                skipped = True
+                if rest == "":
                     continue
-            m = re.match(r"^(?:<[^>]+>)*" + re.escape(title) + r"\s*", line, re.I)
-            if m:
-                rest = line[m.end() :]
-            if rest.strip():
-                if rest.strip().startswith("*") and "<em>" not in rest:
-                    rest = f"<em>{rest.strip()}</em>"
-                cleaned.append(rest.rstrip())
-            continue
+                if _is_dedication(rest):
+                    cleaned.append(f"<em>{html_escape(rest)}</em>" if "<em>" not in line else line.rstrip())
+                    continue
+                cleaned.append(line.rstrip())
+                continue
         if AUTHOR_LINE.match(plain):
             continue
         cleaned.append(line.rstrip())
