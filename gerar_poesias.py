@@ -289,6 +289,7 @@ def build_html(poems: list[dict]) -> str:
         comps = split_comp(p.get("compilacoes") or p.get("compilacao"))
         p["compilacoes"] = comps
         comp_s = html_escape(join_field(comps))
+        note_s = html_escape(p.get("comentario") or "")
         rev = "checked" if p.get("reviewed") else ""
         fav = "checked" if p.get("favorite") else ""
         poems_html.append(
@@ -300,6 +301,7 @@ def build_html(poems: list[dict]) -> str:
             f'<label><input type="checkbox" class="ck-fav" data-id="{pid}" {fav}> Favorito</label>\n'
             f'<label>Tags <input type="text" class="tags" data-id="{pid}" value="{tags_s}"></label>\n'
             f'<label>Compilação <input type="text" class="comp" data-id="{pid}" value="{comp_s}"></label>\n'
+            f'<label>Comentário <input type="text" class="note" data-id="{pid}" value="{note_s}"></label>\n'
             f'</div>\n'
             f'<a class="back" href="#indice">← voltar ao índice</a>\n'
             f'</article>\n'
@@ -336,6 +338,20 @@ def build_html(poems: list[dict]) -> str:
     gap: 28px;
   }}
   #progress {{ font-weight: 700; }}
+  .brand-name {{ font-weight: 700; line-height: 1.2; }}
+  .brand-sub {{ font-weight: 400; font-size: 10pt; color: #444; }}
+  .bar-status {{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    margin-left: 8px;
+  }}
+  footer.site {{
+    margin-top: 8px;
+    font-size: 9pt;
+    color: #444;
+  }}
   nav#indice {{
     scroll-margin-top: 88px;
   }}
@@ -496,18 +512,24 @@ def build_html(poems: list[dict]) -> str:
 </head>
 <body>
 <header class="bar">
-  <div id="progress">Revisados: 0 / {len(poems)}</div>
+  <div class="brand">
+    <div class="brand-name">Ivan Rocha</div>
+    <div class="brand-sub">Poesias</div>
+  </div>
   <div>
     <button type="button" id="btn-hide-rev">Esconder revisados</button>
     <button type="button" id="btn-only-fav">Ver favoritos</button>
     <button type="button" id="btn-empty-tags">Ver tags vazias</button>
     <button type="button" id="btn-save">Salvar JSON</button>
-    <span id="save-status"></span>
+    <div class="bar-status">
+      <span id="save-status"></span>
+      <div id="progress">Revisados: 0 / {len(poems)}</div>
+    </div>
   </div>
 </header>
 <nav id="indice">
   <label class="busca-wrap">
-    <input type="search" id="busca" placeholder="Busca por título, tag ou compilação" autocomplete="off">
+    <input type="search" id="busca" placeholder="Busca por título, tag, compilação ou comentário" autocomplete="off">
   </label>
   <p id="busca-status"></p>
   <div class="chip-row">
@@ -525,11 +547,13 @@ def build_html(poems: list[dict]) -> str:
 </nav>
 <div class="sep" aria-hidden="true"></div>
 {''.join(poems_html)}
+<div class="sep" aria-hidden="true"></div>
+<footer class="site">Todos os textos © Ivan César Martins Rocha</footer>
 <script>
 // Cópia local no Firefox (rascunho). Se mudar o nome, a sessão antiga é ignorada.
-const KEY = "poesias-revisao-v5";
+const KEY = "poesias-revisao-v6";
 const total = {len(poems)};
-let BASE = {json.dumps([{"file_name": p["file_name"], "title": p["title"], "text": p.get("text") or "", "body": p.get("body") or "", "reviewed": bool(p.get("reviewed")), "favorite": bool(p.get("favorite")), "tags": p.get("tags") or [], "compilacoes": p.get("compilacoes") or p.get("compilacao") or []} for p in poems], ensure_ascii=False)};
+let BASE = {json.dumps([{"file_name": p["file_name"], "title": p["title"], "text": p.get("text") or "", "body": p.get("body") or "", "reviewed": bool(p.get("reviewed")), "favorite": bool(p.get("favorite")), "tags": p.get("tags") or [], "compilacoes": p.get("compilacoes") or p.get("compilacao") or [], "comentario": p.get("comentario") or ""} for p in poems], ensure_ascii=False)};
 let fileHandle = null;
 
 function joinList(val) {{
@@ -543,7 +567,8 @@ function seedFromBase() {{
       reviewed: !!p.reviewed,
       favorite: !!p.favorite,
       tags: joinList(p.tags),
-      compilacoes: joinList(p.compilacoes)
+      compilacoes: joinList(p.compilacoes),
+      comentario: p.comentario || ""
     }};
   }});
   return s;
@@ -564,7 +589,8 @@ function loadMeta() {{
       reviewed: !!(p.reviewed || b.reviewed),
       favorite: !!(p.favorite || b.favorite),
       tags: ("tags" in p) ? p.tags : (b.tags || ""),
-      compilacoes: ("compilacoes" in p) ? p.compilacoes : (b.compilacoes || "")
+      compilacoes: ("compilacoes" in p) ? p.compilacoes : (b.compilacoes || ""),
+      comentario: ("comentario" in p) ? p.comentario : (b.comentario || "")
     }};
   }});
   return parsed;
@@ -574,7 +600,7 @@ function saveMeta(state) {{
 }}
 function metaOf(id) {{
   const s = loadMeta();
-  return Object.assign({{reviewed:false, favorite:false, tags:"", compilacoes:""}}, s[id] || {{}});
+  return Object.assign({{reviewed:false, favorite:false, tags:"", compilacoes:"", comentario:""}}, s[id] || {{}});
 }}
 function setMeta(id, patch) {{
   const s = loadMeta();
@@ -587,15 +613,17 @@ function apply() {{
   let n = 0, favs = 0;
   document.querySelectorAll("article.poem").forEach(art => {{
     const id = art.getAttribute("data-id");
-    const m = Object.assign({{reviewed:false, favorite:false, tags:"", compilacoes:""}}, s[id] || {{}});
+    const m = Object.assign({{reviewed:false, favorite:false, tags:"", compilacoes:"", comentario:""}}, s[id] || {{}});
     const ck = art.querySelector(".ck-poem");
     const fv = art.querySelector(".ck-fav");
     const tg = art.querySelector(".tags");
     const cp = art.querySelector(".comp");
+    const nt = art.querySelector(".note");
     if (ck) ck.checked = !!m.reviewed;
     if (fv) fv.checked = !!m.favorite;
     if (tg && document.activeElement !== tg) tg.value = m.tags || "";
     if (cp && document.activeElement !== cp) cp.value = m.compilacoes || "";
+    if (nt && document.activeElement !== nt) nt.value = m.comentario || "";
     art.classList.toggle("done", !!m.reviewed);
     if (m.reviewed) n++;
     if (m.favorite) favs++;
@@ -615,13 +643,14 @@ function apply() {{
 function buildExport() {{
   const s = loadMeta();
   const poems = BASE.map(p => {{
-    const m = Object.assign({{reviewed:false, favorite:false, tags:"", compilacoes:""}}, s[p.file_name] || {{}});
+    const m = Object.assign({{reviewed:false, favorite:false, tags:"", compilacoes:"", comentario:""}}, s[p.file_name] || {{}});
     const split = (v) => (v || "").split(",").map(t => t.trim()).filter(Boolean);
     return Object.assign({{}}, p, {{
       reviewed: !!m.reviewed,
       favorite: !!m.favorite,
       tags: split(m.tags),
-      compilacoes: split(m.compilacoes)
+      compilacoes: split(m.compilacoes),
+      comentario: m.comentario || ""
     }});
   }});
   return {{
@@ -690,11 +719,13 @@ document.addEventListener("change", (ev) => {{
   if (t.matches(".ck-fav")) setMeta(id, {{favorite: t.checked}});
   if (t.matches(".tags")) setMeta(id, {{tags: t.value}});
   if (t.matches(".comp")) setMeta(id, {{compilacoes: t.value}});
+  if (t.matches(".note")) setMeta(id, {{comentario: t.value}});
 }});
 document.addEventListener("input", (ev) => {{
   const t = ev.target;
   if (t.matches(".tags")) setMeta(t.getAttribute("data-id"), {{tags: t.value}});
   if (t.matches(".comp")) setMeta(t.getAttribute("data-id"), {{compilacoes: t.value}});
+  if (t.matches(".note")) setMeta(t.getAttribute("data-id"), {{comentario: t.value}});
 }});
 document.getElementById("btn-save").onclick = () => saveToServer();
 let hideReviewed = false;
@@ -731,7 +762,8 @@ function haystack(art) {{
   const title = (art.querySelector("h1") || {{}}).textContent || "";
   const tags = (art.querySelector(".tags") || {{}}).value || "";
   const comp = (art.querySelector(".comp") || {{}}).value || "";
-  return fold(title + " " + tags + " " + comp + " " + id);
+  const note = (art.querySelector(".note") || {{}}).value || "";
+  return fold(title + " " + tags + " " + comp + " " + note + " " + id);
 }}
 function poemTags(art) {{
   return splitVals((art.querySelector(".tags") || {{}}).value || "");
@@ -808,7 +840,8 @@ function normPoem(p) {{
     reviewed: !!p.reviewed,
     favorite: !!p.favorite,
     tags: p.tags || [],
-    compilacoes: p.compilacoes || p.compilacao || []
+    compilacoes: p.compilacoes || p.compilacao || [],
+    comentario: p.comentario || ""
   }};
 }}
 async function loadSiteJson() {{
@@ -888,6 +921,7 @@ def main() -> None:
                 "favorite": bool(prev.get("favorite")),
                 "tags": prev.get("tags") or [],
                 "compilacoes": prev.get("compilacoes") or prev.get("compilacao") or [],
+                "comentario": prev.get("comentario") or "",
             }
         )
 
