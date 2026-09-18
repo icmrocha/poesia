@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """
-Lê todos os .docx de uma pasta (só a raiz, sem subpastas),
-gera poesias.json e poesias-print.html.
+gerar_poesias.py
+================
+Lê os arquivos Word (.docx) da pasta de poemas e gera dois arquivos:
 
-Uso:
+  poesias.json   → dados (texto, tags, checado, favorito, compilação)
+  index.html     → página de revisão (GitHub Pages / navegador)
+
+O HTML no GitHub Pages CARREGA o poesias.json pela internet. Por isso,
+depois de só mudar tags, basta subir o JSON. Este script só precisa
+rodar de novo quando o TEXTO do poema mudou no Word.
+
+Uso (na pasta onde estão o .py e o poesias.json):
   pip install python-docx
-  python3 gerar_poesias.py "/caminho/para/Poesias"
+  python3 gerar_poesias.py "/caminho/da/pasta/com/os/docx"
 
-Impressão:
-  abra poesias-print.html no Chrome/Firefox
-  Ctrl+P → frente e verso → margens padrão ou mínimas
+O script junta o JSON antigo (tags etc.) com o texto novo dos .docx,
+pelo nome do arquivo (ex.: "Ivan Rocha - 4am.docx").
 """
 
 from __future__ import annotations
@@ -27,12 +34,14 @@ except ImportError:
 
 
 def title_from_name(name: str) -> str:
+    """Se o Word não tiver título em negrito, usa o nome do arquivo."""
     n = re.sub(r"\.docx$", "", name, flags=re.I)
     n = re.sub(r"^Ivan Rocha\s*-\s*", "", n, flags=re.I)
     return n.strip()
 
 
 def paragraph_is_bold(p) -> bool:
+    """True se o parágrafo inteiro está em negrito ou é estilo Título."""
     runs = [r for r in p.runs if (r.text or "").strip()]
     if runs and all(r.bold for r in runs):
         return True
@@ -41,6 +50,7 @@ def paragraph_is_bold(p) -> bool:
 
 
 def extract_text(path: Path) -> str:
+    """Texto puro do Word, sem formatação. Vai para o campo 'text' do JSON."""
     doc = Document(str(path))
     lines = [p.text.replace("\xa0", " ").rstrip() for p in doc.paragraphs]
     while lines and not lines[-1].strip():
@@ -51,6 +61,7 @@ def extract_text(path: Path) -> str:
 
 
 def runs_html(p) -> str:
+    """Converte um parágrafo do Word em HTML simples (itálico vira <em>)."""
     parts = []
     for r in p.runs:
         t = html_escape((r.text or "").replace("\xa0", " "))
@@ -63,7 +74,12 @@ def runs_html(p) -> str:
 
 
 def extract_poem(path: Path) -> tuple[str, str, str]:
-    """Título = trecho em negrito do 1º parágrafo. Corpo com <em> dos itálicos."""
+    """
+    Lê um .docx e devolve (titulo, corpo_texto, corpo_html).
+
+    Título = primeiro trecho em negrito (não a linha "Ivan Rocha").
+    Se na mesma linha vier "*para fulano" em itálico, isso vai para o corpo.
+    """
     doc = Document(str(path))
     title = ""
     html_lines = []
@@ -124,6 +140,7 @@ def extract_poem(path: Path) -> tuple[str, str, str]:
     return title, body, body_html
 
 
+# Linha que é só o nome do autor — não entra no corpo do poema.
 AUTHOR_LINE = re.compile(
     r"^\s*[\(\[\{]?\s*Ivan\s+Rocha\s*[\)\]\}]?\s*$",
     re.I,
@@ -134,16 +151,21 @@ def body_only(text: str, title: str) -> str:
     """Tira título repetido no topo e qualquer linha só com (Ivan Rocha)."""
     lines = text.splitlines()
     cleaned = []
-    title_cf = title.casefold()
+    title_k = sort_key(title)
     skipped_title = False
     for line in lines:
         s = line.strip()
-        if not skipped_title and (
-            s.casefold() == title_cf
-            or s.casefold().startswith(title_cf)
-        ):
+        sk = sort_key(s)
+        if not skipped_title and (sk == title_k or sk.startswith(title_k)):
             skipped_title = True
-            rest = s[len(title) :].lstrip() if s.casefold().startswith(title_cf) else ""
+            rest = s
+            first = s.split(None, 1)
+            if first and sort_key(first[0]) == title_k:
+                rest = first[1] if len(first) > 1 else ""
+            elif sk.startswith(title_k):
+                rest = s[len(title):].lstrip() if s.casefold().startswith(title.casefold()) else s
+                if rest == s and first:
+                    rest = first[1] if len(first) > 1 else ""
             if rest:
                 cleaned.append(rest)
             continue
@@ -206,6 +228,7 @@ def html_escape(s: str) -> str:
 
 
 def build_html(poems: list[dict]) -> str:
+    """Monta o index.html inteiro (CSS + lista + poemas + JavaScript)."""
     poems = sorted(poems, key=lambda p: sort_key(p["title"]))
     index_items = list(enumerate(poems))
     index_html = []
@@ -503,9 +526,10 @@ def build_html(poems: list[dict]) -> str:
 <div class="sep" aria-hidden="true"></div>
 {''.join(poems_html)}
 <script>
-const KEY = "poesias-revisao-v4";
+// Cópia local no Firefox (rascunho). Se mudar o nome, a sessão antiga é ignorada.
+const KEY = "poesias-revisao-v5";
 const total = {len(poems)};
-const BASE = {json.dumps([{"file_name": p["file_name"], "title": p["title"], "text": p.get("text") or "", "body": p.get("body") or "", "reviewed": bool(p.get("reviewed")), "favorite": bool(p.get("favorite")), "tags": p.get("tags") or [], "compilacoes": p.get("compilacoes") or p.get("compilacao") or []} for p in poems], ensure_ascii=False)};
+let BASE = {json.dumps([{"file_name": p["file_name"], "title": p["title"], "text": p.get("text") or "", "body": p.get("body") or "", "reviewed": bool(p.get("reviewed")), "favorite": bool(p.get("favorite")), "tags": p.get("tags") or [], "compilacoes": p.get("compilacoes") or p.get("compilacao") or []} for p in poems], ensure_ascii=False)};
 let fileHandle = null;
 
 function joinList(val) {{
@@ -775,7 +799,37 @@ apply = function() {{
   rebuildChips();
   runSearch();
 }};
-apply();
+function normPoem(p) {{
+  return {{
+    file_name: p.file_name,
+    title: p.title,
+    text: p.text || "",
+    body: p.body || "",
+    reviewed: !!p.reviewed,
+    favorite: !!p.favorite,
+    tags: p.tags || [],
+    compilacoes: p.compilacoes || p.compilacao || []
+  }};
+}}
+async function loadSiteJson() {{
+  if (location.protocol === "file:") return false;
+  try {{
+    const res = await fetch("poesias.json?t=" + Date.now());
+    if (!res.ok) return false;
+    const data = await res.json();
+    const poems = data.poems || data;
+    if (!Array.isArray(poems) || !poems.length) return false;
+    const prev = {{}};
+    BASE.forEach(p => {{ prev[p.file_name] = p; }});
+    BASE = poems.map(p => Object.assign({{}}, prev[p.file_name] || {{}}, normPoem(p)));
+    const el = document.getElementById("save-status");
+    if (el) el.textContent = "JSON do site carregado.";
+    return true;
+  }} catch (e) {{
+    return false;
+  }}
+}}
+loadSiteJson().finally(() => apply());
 </script>
 </body>
 </html>
@@ -783,6 +837,7 @@ apply();
 
 
 def main() -> None:
+    """Ponto de entrada: lista .docx, mistura com o JSON antigo, grava JSON + index.html."""
     if len(sys.argv) < 2:
         print("Uso: python3 gerar_poesias.py \"/caminho/da/pasta/Poesias\"")
         sys.exit(1)
@@ -798,6 +853,7 @@ def main() -> None:
     if not files:
         sys.exit(f"Nenhum .docx na raiz de {folder}")
 
+    # Tags/checado do JSON que já existe NESTA pasta (cwd), não da pasta dos .docx.
     old = {}
     old_json = Path.cwd() / "poesias.json"
     if old_json.is_file():
@@ -835,9 +891,10 @@ def main() -> None:
             }
         )
 
+    # Saída = pasta de onde o comando foi rodado (cwd), para o Git acompanhar.
     out_dir = Path.cwd()
     json_path = out_dir / "poesias.json"
-    html_path = out_dir / "poesias-print.html"
+    html_path = out_dir / "index.html"
 
     payload = {
         "folder": str(folder),
