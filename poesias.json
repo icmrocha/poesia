@@ -10,7 +10,8 @@
       "favorite": false,
       "tags": [
         "Curtos",
-        "Sobre Poesia"
+        "Sobre Poesia",
+        "2014"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -24,7 +25,8 @@
       "favorite": true,
       "tags": [
         "Self",
-        "SP"
+        "SP",
+        "2023"
       ],
       "compilacoes": [
         "Céu Aberto"
@@ -39,7 +41,8 @@
       "reviewed": true,
       "favorite": false,
       "tags": [
-        "Self"
+        "Self",
+        "2017"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -52,7 +55,8 @@
       "reviewed": true,
       "favorite": true,
       "tags": [
-        "Observações Cotidianas"
+        "Observações Cotidianas",
+        "2011"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -66,7 +70,8 @@
       "favorite": true,
       "tags": [
         "Observações Cotidianas",
-        "Curtos"
+        "Curtos",
+        "2014"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -94,7 +99,8 @@
       "reviewed": true,
       "favorite": false,
       "tags": [
-        "RJ"
+        "RJ",
+        "2004"
       ],
       "compilacoes": [
         "Repaginando"
@@ -111,7 +117,9 @@
       "tags": [
         "Sobre o Tempo",
         "Cinza Escuro",
-        "Série"
+        "Série",
+        "2014",
+        "Homônimo"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -126,7 +134,9 @@
       "tags": [
         "Sobre o Tempo",
         "Cinza Escuro",
-        "Série"
+        "Série",
+        "Homônimo",
+        "2025"
       ],
       "compilacoes": [
         "A Lua por trás dos Jasmins",
@@ -142,7 +152,8 @@
       "reviewed": true,
       "favorite": true,
       "tags": [
-        "Guerra"
+        "Guerra",
+        "2008"
       ],
       "compilacoes": [
         "Repaginando"
@@ -157,7 +168,8 @@
       "reviewed": true,
       "favorite": false,
       "tags": [
-        "Curtos"
+        "Curtos",
+        "2007"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -170,7 +182,8 @@
       "reviewed": true,
       "favorite": false,
       "tags": [
-        "Personagens/Histórias"
+        "Personagens/Histórias",
+        "2010"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -183,7 +196,8 @@
       "reviewed": true,
       "favorite": false,
       "tags": [
-        "Sobre Poesia"
+        "Sobre Poesia",
+        "2018"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -196,7 +210,8 @@
       "reviewed": true,
       "favorite": true,
       "tags": [
-        "Sobre Poesia"
+        "Sobre Poesia",
+        "2005"
       ],
       "compilacoes": [
         "Repaginando"
@@ -226,7 +241,9 @@
       "body": "Um brinde aos desenganos\n\nnossos vícios cotidianos\n\npequenos precipícios\n\nde onde nos jogamos\n\nde tempos em tempos\n\nquando não estamos\n\n                                        atentos.",
       "reviewed": true,
       "favorite": true,
-      "tags": [],
+      "tags": [
+        "2025"
+      ],
       "compilacoes": [
         "A Lua por trás dos Jasmins",
         "O Mundo Aqui Dentro"
@@ -243,7 +260,9 @@
       "tags": [
         "Com Dedicatória",
         "A Finitude da Vida",
-        "Família"
+        "Família",
+        "2007",
+        "Série"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -256,7 +275,8 @@
       "reviewed": true,
       "favorite": true,
       "tags": [
-        "A Finitude da Vida"
+        "A Finitude da Vida",
+        "Série"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -280,10 +300,12 @@
       "title": "Acaba em Pizza",
       "text": "Acaba em Pizza\n (Ivan Rocha)\n\nMe vê meio pastel e meia cana\npois eu só tenho meia fome\ne meia grana\n\nMe vê meia paixão e meia esperança\nporque só tenho meia vida\ne meia fama\n\nMe vê meio deputado e meio bandido\npois eu só tenho uma cadeira\ne uma cadeia\n\nEntão me vê meia mussarela e meia calabresa\npois eles só têm meia dignidade\nE nós, meia certeza.",
       "body": "Me vê meio pastel e meia cana\npois eu só tenho meia fome\ne meia grana\n\nMe vê meia paixão e meia esperança\nporque só tenho meia vida\ne meia fama\n\nMe vê meio deputado e meio bandido\npois eu só tenho uma cadeira\ne uma cadeia\n\nEntão me vê meia mussarela e meia calabresa\npois eles só têm meia dignidade\nE nós, meia certeza.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
-        "Brasil"
+        "Brasil",
+        "2007",
+        "Privado"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -293,11 +315,12 @@
       "title": "Acordar com Você",
       "text": "Acordar com Você\n(Ivan Rocha)\n\nVocê abre os olhos em Copa\nbem devagar\nE amanhece o dia no Rio\n(o Sol, como você,\nsem pressa de brilhar)\n\nSe estica toda (derrama-se\npela extensão da cama)\ne seu ronronar\navisa às gaivotas que é hora\nde voar\n\nE enquanto o breu da noite dá lugar\nao laranja e lilás\n(e o silêncio se torna canto\nde aves, ronco de carros, passos,\nfábricas a apitar)\n\na vida em meu coração cansado\nse alegra em, mais uma vez,\ndespertar.",
       "body": "Você abre os olhos em Copa\nbem devagar\nE amanhece o dia no Rio\n(o Sol, como você,\nsem pressa de brilhar)\n\nSe estica toda (derrama-se\npela extensão da cama)\ne seu ronronar\navisa às gaivotas que é hora\nde voar\n\nE enquanto o breu da noite dá lugar\nao laranja e lilás\n(e o silêncio se torna canto\nde aves, ronco de carros, passos,\nfábricas a apitar)\n\na vida em meu coração cansado\nse alegra em, mais uma vez,\ndespertar.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Pra Iaiá",
-        "Amor"
+        "Amor",
+        "2016"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -307,11 +330,12 @@
       "title": "Adwaita* (1750-2006)",
       "text": "Adwaita* (1750-2006)\n(Ivan Rocha)\n\nvocê nasceu\nantes de Mozart\nantes da Revolução Francesa\nantes do experimento de Franklin\n\nantes de Pessoa,\nVinícius,\nGullar,\ne muito, muito,\nmuito antes de mim\n\ne se foi\nantes que eu\n(abismado)\npudesse sequer pensar\nem te homenagear\ncom um mero poema.\n\n\n*a tartaruga mais velha do mundo",
       "body": "você nasceu\nantes de Mozart\nantes da Revolução Francesa\nantes do experimento de Franklin\n\nantes de Pessoa,\nVinícius,\nGullar,\ne muito, muito,\nmuito antes de mim\n\ne se foi\nantes que eu\n(abismado)\npudesse sequer pensar\nem te homenagear\ncom um mero poema.\n\n\n*a tartaruga mais velha do mundo",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Personagens/Histórias",
-        "Com dedicatória"
+        "Com dedicatória",
+        "2007"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -321,7 +345,7 @@
       "title": "Alimento",
       "text": "Alimento\n(Ivan Rocha)\n\nMinha poesia é alimento.\nÀs vezes, dela, me esqueço\ne enfraqueço\n\nEnfraquecido, adoeço\ne, num momento de desespero,\nquase me despeço.\n\nNinguém mandou ser poeta:\nEste é o preço",
       "body": "Minha poesia é alimento.\nÀs vezes, dela, me esqueço\ne enfraqueço\n\nEnfraquecido, adoeço\ne, num momento de desespero,\nquase me despeço.\n\nNinguém mandou ser poeta:\nEste é o preço",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Curtos",
@@ -335,11 +359,13 @@
       "title": "Alívio    *",
       "text": "Alívio    *para meu pai, no hospital\n\nFoi para um quarto\nfechado\n\nFoi espetado\nfurado\ntestado\n\nFoi invadido\ncortado aberto e costurado\n\nFoi forte em todos os momentos\n\ne foi libertado.\n\n--2022",
       "body": "para meu pai, no hospital\n\nFoi para um quarto\nfechado\n\nFoi espetado\nfurado\ntestado\n\nFoi invadido\ncortado aberto e costurado\n\nFoi forte em todos os momentos\n\ne foi libertado.\n\n--2022",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Família",
-        "Com dedicatória"
+        "Com dedicatória",
+        "2022",
+        "A Finitude da Vida"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -349,10 +375,11 @@
       "title": "All Things Considered",
       "text": "All Things Considered\n(Ivan Rocha)\n\n(Somos)\ndois gatos\nvira-latas\nsobre o muro\nse arranhando\nse empurrando\nSempre à beira da insanidade\nmas quase se amando\nSempre quase caindo\ne o outro salvando;\nSempre indo e voltando\n\n(Somos)\ndois adultos brincando\nde adolescentes\ndois malucos brigando\ncom a própria mente\nse adorando\nse odiando\nbarganhando com o destino\npor pelo menos mais um dia\nlutando;\nSempre indo e voltando\n\n(Somos)\nmais do que deveríamos ser\nmas, ao mesmo tempo, temos\nmuito menos\nque gostaríamos de ter\n\num do outro.\n\nSempre nos enganando\nComo dois gatos vira-latas\nSempre indo\ne voltando.",
       "body": "(Somos)\ndois gatos\nvira-latas\nsobre o muro\nse arranhando\nse empurrando\nSempre à beira da insanidade\nmas quase se amando\nSempre quase caindo\ne o outro salvando;\nSempre indo e voltando\n\n(Somos)\ndois adultos brincando\nde adolescentes\ndois malucos brigando\ncom a própria mente\nse adorando\nse odiando\nbarganhando com o destino\npor pelo menos mais um dia\nlutando;\nSempre indo e voltando\n\n(Somos)\nmais do que deveríamos ser\nmas, ao mesmo tempo, temos\nmuito menos\nque gostaríamos de ter\n\num do outro.\n\nSempre nos enganando\nComo dois gatos vira-latas\nSempre indo\ne voltando.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
-        "Amores Imperfeitos"
+        "Amores Imperfeitos",
+        "2015"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -362,8 +389,8 @@
       "title": "alterego",
       "text": "alterego\n (Ivan Rocha)\n\nmeu eu antigo\ngrande inimigo\nme visitou\n\nfalou comigo\npediu abrigo\nme envenenou\n\nenquanto eu (do presente) tentava\n     lutava contra\n       meu eu (do passado) tomava\n                conta\n\nlacrou meu sorriso\nlevou meu juízo\nme deu prejuízo\nencheu meu mundo de cinismo\n\ntanto fez esse eu (que não sou eu,\n                                                      mas era,\n\t\t\t                         mas é)\nque também pudera\nme senti puxado\npro centro do abismo\n\ndentre os meus\nmuitos eus\nsó os fortes sobrevivem;\nos fracos caem:\ndizem adeus\ne eu nem ligo.",
       "body": "meu eu antigo\ngrande inimigo\nme visitou\n\nfalou comigo\npediu abrigo\nme envenenou\n\nenquanto eu (do presente) tentava\n     lutava contra\n       meu eu (do passado) tomava\n                conta\n\nlacrou meu sorriso\nlevou meu juízo\nme deu prejuízo\nencheu meu mundo de cinismo\n\ntanto fez esse eu (que não sou eu,\n                                                      mas era,\n\t\t\t                         mas é)\nque também pudera\nme senti puxado\npro centro do abismo\n\ndentre os meus\nmuitos eus\nsó os fortes sobrevivem;\nos fracos caem:\ndizem adeus\ne eu nem ligo.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Self",
         "Cinza Escuro"
@@ -376,9 +403,12 @@
       "title": "Amanhecer",
       "text": "Amanhecer\n\nSobrevoando o Rio\nda varanda do apartamento\nflutua meu pensamento\n\nCom a barra da manhã\nvem o Sol cheio de manha;\nlento vai aparecendo\n\nIluminando telhados\nsobre ladeiras desliza\ne refletido nos prédios espelhados\n\naquece minha pele\no seu raiar\n\nenquanto a brisa leve\ncalmamente leva\n\na noite pra passear\nem outro lugar.",
       "body": "Sobrevoando o Rio\nda varanda do apartamento\nflutua meu pensamento\n\nCom a barra da manhã\nvem o Sol cheio de manha;\nlento vai aparecendo\n\nIluminando telhados\nsobre ladeiras desliza\ne refletido nos prédios espelhados\n\naquece minha pele\no seu raiar\n\nenquanto a brisa leve\ncalmamente leva\n\na noite pra passear\nem outro lugar.",
-      "reviewed": false,
-      "favorite": false,
-      "tags": [],
+      "reviewed": true,
+      "favorite": true,
+      "tags": [
+        "Amor",
+        "RJ"
+      ],
       "compilacoes": [],
       "comentario": ""
     },
@@ -387,11 +417,13 @@
       "title": "Amar No Rio de Janeiro",
       "text": "Amar No Rio de Janeiro\n(Ivan Rocha)\n\nMorreu mais um.\nNo noticiário, sempre certeiro,\ndeu que era traficante\n\t\t  ou\num cidadão comum\n(o fato é que morreu mais um,\nachado caído sobre os olhos de gato\n\t\tda ciclovia)\n\nEnquanto eu\nsó pensava em seus olhos\n\t\tde gata\nno seu perfume\ne na cor das suas unhas\ncontrastando com minha pele\n\t\tnua\n\nEntão saí pra te ver e quase bato o carro\nno trânsito (cada vez mais\n\t\tlouco, cada\nvez mais caótico)\nque não dá espaço\npara os apaixonados\nque andam distraídos\ncom a cabeça na Lua\npensando em sua musa\n\n(depois empaquei no engarrafamento\nque só não era maior\nque o meu amor por você\ne cheguei a te esquecer, confesso,\nnuma fração de segundos\nenquanto ambulantes gritavam\nseus produtos\ne eu pagava caro\npra parar meu carro\nna rua, que era grátis,\ne agora não é)\n\nMas logo te encontrei\nlinda, estonteante\ne atravessei o calor da avenida\napenas pra sentir o seu calor\n\nE te beijei com paixão\nenquanto um caminhão\nda Comlurb passava\n\te embaralhava os nossos\n\t\tsentidos\n\n(A cidade e seus dejetos\npedem, ao nosso amor,\npassagem\ne confundem-se com a bela\npaisagem\nrefletida nos seus olhos\nde Verão).",
       "body": "Morreu mais um.\nNo noticiário, sempre certeiro,\ndeu que era traficante\n\t\t  ou\num cidadão comum\n(o fato é que morreu mais um,\nachado caído sobre os olhos de gato\n\t\tda ciclovia)\n\nEnquanto eu\nsó pensava em seus olhos\n\t\tde gata\nno seu perfume\ne na cor das suas unhas\ncontrastando com minha pele\n\t\tnua\n\nEntão saí pra te ver e quase bato o carro\nno trânsito (cada vez mais\n\t\tlouco, cada\nvez mais caótico)\nque não dá espaço\npara os apaixonados\nque andam distraídos\ncom a cabeça na Lua\npensando em sua musa\n\n(depois empaquei no engarrafamento\nque só não era maior\nque o meu amor por você\ne cheguei a te esquecer, confesso,\nnuma fração de segundos\nenquanto ambulantes gritavam\nseus produtos\ne eu pagava caro\npra parar meu carro\nna rua, que era grátis,\ne agora não é)\n\nMas logo te encontrei\nlinda, estonteante\ne atravessei o calor da avenida\napenas pra sentir o seu calor\n\nE te beijei com paixão\nenquanto um caminhão\nda Comlurb passava\n\te embaralhava os nossos\n\t\tsentidos\n\n(A cidade e seus dejetos\npedem, ao nosso amor,\npassagem\ne confundem-se com a bela\npaisagem\nrefletida nos seus olhos\nde Verão).",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Amores Imperfeitos",
-        "RJ"
+        "RJ",
+        "Série",
+        "Amor"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -401,11 +433,13 @@
       "title": "Amar No Rio de Janeiro II",
       "text": "Amar No Rio de Janeiro II\n(Ivan Rocha)\n\nAs senhoras de Botafogo (quase Urca)\nnão sabem o que é amor,\nou não o viveram intensamente,\nou, quem sabe, ultimamente,\nacostumaram-se com o marasmo\n\n(suas vidas como o mar pacato\n\t\tda enseada)\n\nJá as senhoras de Copa,\nao passear com seus poodles,\ne verem um casal fazendo juras\njuram que o amor é lindo\n(ainda que com algum sarcasmo)\n\nO amor, no Rio de Janeiro,\nconvive ao lado do cheiro\nque emana das casas\nAnda de mãos dadas\nnas calçadas\nCaça bares,\nnovos ares,\nolhares,\n\n\tnão depende da opinião das senhoras\n\te requer de nós um pouco mais\n\tdo que amor:\n\n\trequer humor.",
       "body": "As senhoras de Botafogo (quase Urca)\nnão sabem o que é amor,\nou não o viveram intensamente,\nou, quem sabe, ultimamente,\nacostumaram-se com o marasmo\n\n(suas vidas como o mar pacato\n\t\tda enseada)\n\nJá as senhoras de Copa,\nao passear com seus poodles,\ne verem um casal fazendo juras\njuram que o amor é lindo\n(ainda que com algum sarcasmo)\n\nO amor, no Rio de Janeiro,\nconvive ao lado do cheiro\nque emana das casas\nAnda de mãos dadas\nnas calçadas\nCaça bares,\nnovos ares,\nolhares,\n\n\tnão depende da opinião das senhoras\n\te requer de nós um pouco mais\n\tdo que amor:\n\n\trequer humor.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Amores Imperfeitos",
-        "RJ"
+        "RJ",
+        "Série",
+        "Amor"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -415,11 +449,12 @@
       "title": "Amor e Poesia",
       "text": "Amor e Poesia\n(Ivan Rocha)\n\nSaber amar\nnão se aprende\nformalmente\nnas escolas\nAssim como não se ensina (mais)\na fazer poesia\n\nE, quem diria,\nambos são fundamentais\npara o dia-\n            a-dia.",
       "body": "Saber amar\nnão se aprende\nformalmente\nnas escolas\nAssim como não se ensina (mais)\na fazer poesia\n\nE, quem diria,\nambos são fundamentais\npara o dia-\n            a-dia.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Curtos",
-        "Sobre Poesia"
+        "Sobre Poesia",
+        "Amor"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -429,11 +464,12 @@
       "title": "Amores na Madrugada",
       "text": "Amores na Madrugada\n(Ivan Rocha)\n\nAmores vão e vem\ne vão\ne vem\nsem saber\nem qual curva irão\nse chocar\nou se achar\n\nVem e vão\ntentam em vão se reconstruir\nMas perdem, no caminho, um pouco de si\npouco a pouco\npodem, um dia,\nsumir\n\nNestas idas e vindas\nquando não há direção\nou sentido\npassam, um pelo outro,\n(às vezes sem perceber\nàs vezes se esbarram\nàs vezes se misturam)\n\nConfundem-se:\nuns se abrem ao futuro\nenquanto\noutros se fecham a tudo\n\nSem cessar,\neste eterno ir e vir\nde amores\n\t e\n\t    paixões\n\t    confusões\n\t    confissões\n\nembaralha-se\ncom o vento quente\nque sopra na madrugada\nde um dia de verão\nno Rio de Janeiro.",
       "body": "Amores vão e vem\ne vão\ne vem\nsem saber\nem qual curva irão\nse chocar\nou se achar\n\nVem e vão\ntentam em vão se reconstruir\nMas perdem, no caminho, um pouco de si\npouco a pouco\npodem, um dia,\nsumir\n\nNestas idas e vindas\nquando não há direção\nou sentido\npassam, um pelo outro,\n(às vezes sem perceber\nàs vezes se esbarram\nàs vezes se misturam)\n\nConfundem-se:\nuns se abrem ao futuro\nenquanto\noutros se fecham a tudo\n\nSem cessar,\neste eterno ir e vir\nde amores\n\t e\n\t    paixões\n\t    confusões\n\t    confissões\n\nembaralha-se\ncom o vento quente\nque sopra na madrugada\nde um dia de verão\nno Rio de Janeiro.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Amores Imperfeitos",
-        "RJ"
+        "RJ",
+        "Amor"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -443,9 +479,13 @@
       "title": "Analogia da Mosca",
       "text": "Analogia da Mosca\n(Ivan Rocha)\n\nàs vezes me sinto\ncomo aquela mosca que vejo\n                                          ouço\n                 martelando a janela\n\n                 buscando fugas\n                 pousando na merda\n\ncondenado ao hábito insistente\nde nunca estar com a mente presente\n\nno mesmo exato lugar\nque meu corpo tenta ocupar\n\n             por mais que eu tente.",
       "body": "às vezes me sinto\ncomo aquela mosca que vejo\n                                          ouço\n                 martelando a janela\n\n                 buscando fugas\n                 pousando na merda\n\ncondenado ao hábito insistente\nde nunca estar com a mente presente\n\nno mesmo exato lugar\nque meu corpo tenta ocupar\n\n             por mais que eu tente.",
-      "reviewed": false,
-      "favorite": false,
-      "tags": [],
+      "reviewed": true,
+      "favorite": true,
+      "tags": [
+        "2025",
+        "Observações Cotidianas",
+        "Self"
+      ],
       "compilacoes": [
         "A Lua por trás dos Jasmins",
         "O Mundo Aqui Dentro"
@@ -457,8 +497,8 @@
       "title": "Andarilho",
       "text": "Andarilho\n(Ivan Rocha)\n\nCheio de pedras nos sapatos\nque a vida traz\ne pensamentos abortados\ndentro da mente\ndentro da noite\n\nCalos nos pés de\ntanto andar em círculos\nprocurando razões\npra sorte (ou revés)\nde ser inócuo\n\nQuase invisível,\nouço passos;\nDe onde vêm, eu sei\nPra onde vão, ignoro\nTento voltar a sonhar, mas acordo\n\nO barulho dos carros, dos ônibus\ne do meu passado, ecoando\né alto demais pro meu sono\n\nVejo gente apressada\ncorrendo pra nada (desesperadas)\nGente que perde tempo (coisa que, também, não tenho)\nE, como todos sabem,\ntempo é dinheiro.\n\nTento voltar a sonhar\nmas meu destino é andar\n(Se Pessoa visse\no que tenho vivido\nteria dito\nque caminhar é preciso)\n\nAndarilho\naprendi a viver comigo\nsó não aprendi a ser sozinho.",
       "body": "Cheio de pedras nos sapatos\nque a vida traz\ne pensamentos abortados\ndentro da mente\ndentro da noite\n\nCalos nos pés de\ntanto andar em círculos\nprocurando razões\npra sorte (ou revés)\nde ser inócuo\n\nQuase invisível,\nouço passos;\nDe onde vêm, eu sei\nPra onde vão, ignoro\nTento voltar a sonhar, mas acordo\n\nO barulho dos carros, dos ônibus\ne do meu passado, ecoando\né alto demais pro meu sono\n\nVejo gente apressada\ncorrendo pra nada (desesperadas)\nGente que perde tempo (coisa que, também, não tenho)\nE, como todos sabem,\ntempo é dinheiro.\n\nTento voltar a sonhar\nmas meu destino é andar\n(Se Pessoa visse\no que tenho vivido\nteria dito\nque caminhar é preciso)\n\naprendi a viver comigo\nsó não aprendi a ser sozinho.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Personagens/Histórias"
       ],
@@ -470,8 +510,8 @@
       "title": "Anticorpos",
       "text": "Anticorpos\n(Ivan Rocha)\n\nEu corto a minha carne\ne o corte é um alarme\nMeu corpo entra em alerta\no anticorpo rebelde\nataca o que fere\nrespeita minha pele\nrepele o que infecta\nrejeita o que não presta\n\nSe corto a minha alma\numa poesia como esta\nescorre feito plasma\npela fenda\n\t  aberta\n\nAté que o ponto final\ntorne-se o anticorpo ideal\npro poema\ne o poeta.",
       "body": "Eu corto a minha carne\ne o corte é um alarme\nMeu corpo entra em alerta\no anticorpo rebelde\nataca o que fere\nrespeita minha pele\nrepele o que infecta\nrejeita o que não presta\n\nSe corto a minha alma\numa poesia como esta\nescorre feito plasma\npela fenda\n\t  aberta\n\nAté que o ponto final\ntorne-se o anticorpo ideal\npro poema\ne o poeta.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Sobre Poesia"
       ],
@@ -483,9 +523,12 @@
       "title": "Apreciar",
       "text": "Apreciar\n\nÀs vezes vejo\ncoisas tão belas\n(como seus olhos)\nque meus olhos até marejam.\n\n--2023",
       "body": "Às vezes vejo\ncoisas tão belas\n(como seus olhos)\nque meus olhos até marejam.\n\n--2023",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
-      "tags": [],
+      "tags": [
+        "2023",
+        "Curtos"
+      ],
       "compilacoes": [],
       "comentario": ""
     },
@@ -494,8 +537,8 @@
       "title": "Après Moi",
       "text": "Après Moi\n\t\t*dédié à Louis XV\n(Ivan Rocha)\n\nAprès moi, le déluge.\n\nSeria eu, portanto,\nde tanto ser inconstante,\na prova viva do instante\nde calmaria\n\t\tantes\nda tempestade?\n\nPelo bem da cidade\ne já que permanece o mistério\nmelhor não me tirar do sério.",
       "body": "\t\t*dédié à Louis XV\n\nAprès moi, le déluge.\n\nSeria eu, portanto,\nde tanto ser inconstante,\na prova viva do instante\nde calmaria\n\t\tantes\nda tempestade?\n\nPelo bem da cidade\ne já que permanece o mistério\nmelhor não me tirar do sério.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Self",
         "Com dedicatória"
@@ -508,10 +551,12 @@
       "title": "Aproximadamente 250 gramas",
       "text": "Aproximadamente 250 gramas\n(Ivan Rocha)\n\nUm coração médio\ndeve pesar\nuns 250 gramas.\n\nO meu pesa,\nno mínimo,\no quíntuplo disso\n\npois carrego dentro dele\numa imagem de você\nsua pele\nseus cabelos\nseus olhos\nseus seios\nseu cheiro\nseu beijo\n(dentre tantas\noutras coisas\nque não posso – não devo –\ndescrever)\n\nE cada batida\ndesse coração vagabundo\ndeixa aberta uma ferida\nexposta pro mundo\n\nMas a dor é suportável\ne, com tempo,\nserá curável.",
       "body": "Um coração médio\ndeve pesar\nuns 250 gramas.\n\nO meu pesa,\nno mínimo,\no quíntuplo disso\n\npois carrego dentro dele\numa imagem de você\nsua pele\nseus cabelos\nseus olhos\nseus seios\nseu cheiro\nseu beijo\n(dentre tantas\noutras coisas\nque não posso – não devo –\ndescrever)\n\nE cada batida\ndesse coração vagabundo\ndeixa aberta uma ferida\nexposta pro mundo\n\nMas a dor é suportável\ne, com tempo,\nserá curável.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
-        "Amores Imperfeitos"
+        "Amores Imperfeitos",
+        "Amor",
+        "2013"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -521,8 +566,8 @@
       "title": "Aquela Casa em Lambari",
       "text": "Aquela Casa em Lambari\n(Ivan Rocha)\n\nNaquela casa\nna Rua Rondônia, 44\nnão habita mais\nnossa gente,\nnossa alegria\n\n(Habita, agora, quem sabe\noutras alegrias\nde outra gente)\n\nFomos felizes ali\nHoje, somos fantasmas\ntocando as paredes de fotos\ne diplomas, sentindo o cheiro da sala\ne pisando o frio\n\tchão do banheiro\nnuma manhã de névoa\n\tem Lambari.",
       "body": "Naquela casa\nna Rua Rondônia, 44\nnão habita mais\nnossa gente,\nnossa alegria\n\n(Habita, agora, quem sabe\noutras alegrias\nde outra gente)\n\nFomos felizes ali\nHoje, somos fantasmas\ntocando as paredes de fotos\ne diplomas, sentindo o cheiro da sala\ne pisando o frio\n\tchão do banheiro\nnuma manhã de névoa\n\tem Lambari.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Self",
         "Caixa de Lembranças",
@@ -536,9 +581,13 @@
       "title": "Aquela Velha Mania",
       "text": "Aquela Velha Mania\n\nEu não perdi\na minha velha mania\nde escrever poesia\n\nsó me perdi\nno labirinto\ndo dia-a-dia\n\nmas, de vez em quando, me espanto\ncom alguma coisa de canto\n                                 de olho\n\nalgo me encanta\nque não estou esperando\n\ncomo suas maçãs do rosto,\nsuas mãos de unhas coloridas\ncolocando sonhos no papel\n\nAí, tudo que vejo e sinto\ne ouço e penso\né só poesia.\n\n--2024",
       "body": "Eu não perdi\na minha velha mania\nde escrever poesia\n\nsó me perdi\nno labirinto\ndo dia-a-dia\n\nmas, de vez em quando, me espanto\ncom alguma coisa de canto\n                                 de olho\n\nalgo me encanta\nque não estou esperando\n\ncomo suas maçãs do rosto,\nsuas mãos de unhas coloridas\ncolocando sonhos no papel\n\nAí, tudo que vejo e sinto\ne ouço e penso\né só poesia.\n\n--2024",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
-      "tags": [],
+      "tags": [
+        "Sobre Poesia",
+        "Amor",
+        "2024"
+      ],
       "compilacoes": [
         "Céu Aberto",
         "Sobre Ela"
@@ -550,7 +599,7 @@
       "title": "Aromas",
       "text": "Aromas\n(Ivan Rocha)\n\nCada gota\nque toca o solo\nabre uma pequena caixa\nde perfumes\n\nJuntos, eles compõem\no inconfundível “cheiro de chuva”\nque, sentado à varanda\napreciso,\nanaliso,\ndescrevo.",
       "body": "Cada gota\nque toca o solo\nabre uma pequena caixa\nde perfumes\n\nJuntos, eles compõem\no inconfundível “cheiro de chuva”\nque, sentado à varanda\napreciso,\nanaliso,\ndescrevo.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Curtos",
@@ -564,11 +613,13 @@
       "title": "Arte Cotidiana",
       "text": "Arte Cotidiana\n\nBem dentro da tarde\n\ta arte pulsa no quintal\n\tde chão escaldante\n\tpor entre as curvas dos seus cabelos\n\tpor entre os dedos dos pés\n\tnas suas curvas\n\tnas suas coxas\n\tno seu olhar\n\ta arte pulsa no quintal\n\nBem dentro da tarde\njunto à esperança de chuva\nque rola pelos telhados e faz tocar\nos sinos dos vizinhos\nnas varandas\npulsa a arte:\n\nO Sol no rosto\ne a água fresca\ne as nuvens leves\nna brisa breve\ne tua pele\n\tsolar e bela\n\tque me revelas\n\tnesta tarde no Méier.",
       "body": "Bem dentro da tarde\n\ta arte pulsa no quintal\n\tde chão escaldante\n\tpor entre as curvas dos seus cabelos\n\tpor entre os dedos dos pés\n\tnas suas curvas\n\tnas suas coxas\n\tno seu olhar\n\ta arte pulsa no quintal\n\nBem dentro da tarde\njunto à esperança de chuva\nque rola pelos telhados e faz tocar\nos sinos dos vizinhos\nnas varandas\npulsa a arte:\n\nO Sol no rosto\ne a água fresca\ne as nuvens leves\nna brisa breve\ne tua pele\n\tsolar e bela\n\tque me revelas\n\tnesta tarde no Méier.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Pra Iaiá",
-        "Amor"
+        "Amor",
+        "2017",
+        "Tarde"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -578,8 +629,8 @@
       "title": "As Laranjas",
       "text": "As Laranjas\n\nAs laranjas sintetizam\na luz de dias inteiros\nem movimentos cíclicos\n\nde janeiro a janeiro\n\nintumescendo em líquido\nnormalmente cítrico\ne fibras, vitaminas, sementes\n\num universo inteiro\n\nrenova-se diariamente\ne me permite docemente\neventualmente\n\nsorver o Sol.",
       "body": "As laranjas sintetizam\na luz de dias inteiros\nem movimentos cíclicos\n\nde janeiro a janeiro\n\nintumescendo em líquido\nnormalmente cítrico\ne fibras, vitaminas, sementes\n\num universo inteiro\n\nrenova-se diariamente\ne me permite docemente\neventualmente\n\nsorver o Sol.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Observações Cotidianas"
       ],
@@ -594,7 +645,7 @@
       "title": "Astromélias na Janela",
       "text": "Astromélias na Janela\n (Ivan Rocha)\n\nPor enquanto, meu amor,\nte abraçar na madrugada\né só um sonho distante\n\nmas as astromélias\nna sua janela\nforam uma idéia brilhante:\n\nSe você não tem meu cheiro\npertinho de ti\nelas vão te perfumar\n\nSe não tem o meu ronco\nao pé do ouvido\ntens, delas, o rumorejar\n\nE se não posso estar contigo\npra te beijar, pelo menos sei\nque você vai abrir o maior sorriso\nao acordar\n\nE o dia vai clarear.",
       "body": "Por enquanto, meu amor,\nte abraçar na madrugada\né só um sonho distante\n\nmas as astromélias\nna sua janela\nforam uma idéia brilhante:\n\nSe você não tem meu cheiro\npertinho de ti\nelas vão te perfumar\n\nSe não tem o meu ronco\nao pé do ouvido\ntens, delas, o rumorejar\n\nE se não posso estar contigo\npra te beijar, pelo menos sei\nque você vai abrir o maior sorriso\nao acordar\n\nE o dia vai clarear.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Pra Iaiá",
@@ -608,8 +659,8 @@
       "title": "Astronauta",
       "text": "Astronauta\n(Ivan Rocha)\n\nViajo entre vales,\nmontanhas e mares\nMe entranho entre escombros\n\t\t      de pano\npra chegar à constelação do seu ombro\n\nligando seus pontos\ndas pintas nos braços\naos seus olhos (meteoros)\naos seus cachos\n\nMe perco e me acho\nnos caminhos que traço\nSou astronauta e seu corpo\n\t       é meu espaço\n\n\tTe exploro e descubro\n\tem cada noite um novo rumo.",
       "body": "Viajo entre vales,\nmontanhas e mares\nMe entranho entre escombros\n\t\t      de pano\npra chegar à constelação do seu ombro\n\nligando seus pontos\ndas pintas nos braços\naos seus olhos (meteoros)\naos seus cachos\n\nMe perco e me acho\nnos caminhos que traço\nSou astronauta e seu corpo\n\t       é meu espaço\n\n\tTe exploro e descubro\n\tem cada noite um novo rumo.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Pra Iaiá",
         "Amor"
@@ -622,11 +673,12 @@
       "title": "Aterro do Flamengo",
       "text": "Aterro do Flamengo\n(Ivan Rocha)\n\nEu quero respirar a maresia\n\t   e o gás carbônico\nEu quero escrever mil poesias\n\t   e alguns contos\nEu quero contemplar a maravilha\n\t   do outono\nEu quero ver/viver a vida\n\t   dos meus sonhos\n\nÀs vezes o tempo de sonhar\n\t   é tão pouco\nPassa a paisagem, tão rápida\n \t   e tão pouco\n\t   tempo temos\n\t   para olhar.\nA chuva deixa marcas na janela\nO amor\n\tdeixa marcas\n\t\t         no coração.\n\nmas sempre há o Sol para secar.",
       "body": "Eu quero respirar a maresia\n\t   e o gás carbônico\nEu quero escrever mil poesias\n\t   e alguns contos\nEu quero contemplar a maravilha\n\t   do outono\nEu quero ver/viver a vida\n\t   dos meus sonhos\n\nÀs vezes o tempo de sonhar\n\t   é tão pouco\nPassa a paisagem, tão rápida\n \t   e tão pouco\n\t   tempo temos\n\t   para olhar.\nA chuva deixa marcas na janela\nO amor\n\tdeixa marcas\n\t\t         no coração.\n\nmas sempre há o Sol para secar.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Self",
-        "RJ"
+        "RJ",
+        "2006"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -636,11 +688,12 @@
       "title": "Até Quando?",
       "text": "Até Quando?\n(Ivan Rocha)\n\nAs palavras se amontoam\nda parte de trás de meus dentes cerrados\nao meu esôfago\nComo se vomitá-las\nfosse a única solução\npara acalmar minha boca\n\nE a cada minuto que eu calo\nmais uma frase inteira entra na fila\ne me angustia\nE me corroem por dentro\nas pontas finas\ndas letras em caixa-alta\n\n(Pois, o que quero,\n          já não é falar,\n                                 é GRITAR)\n\nMas eu calo\naté que meu suco gástrico\n(ou uma garrafa de uísque)\nas dissolvam\ne as tornem mais digestíveis\ne suficientemente ininteligíveis\n\nNo dia seguinte\no amontoado de letras\n(Tudo aquilo que eu não disse)\nvira lágrima\ne um poema\n\t\t– até quando?",
       "body": "As palavras se amontoam\nda parte de trás de meus dentes cerrados\nao meu esôfago\nComo se vomitá-las\nfosse a única solução\npara acalmar minha boca\n\nE a cada minuto que eu calo\nmais uma frase inteira entra na fila\ne me angustia\nE me corroem por dentro\nas pontas finas\ndas letras em caixa-alta\n\n(Pois, o que quero,\n          já não é falar,\n                                 é GRITAR)\n\nMas eu calo\naté que meu suco gástrico\n(ou uma garrafa de uísque)\nas dissolvam\ne as tornem mais digestíveis\ne suficientemente ininteligíveis\n\nNo dia seguinte\no amontoado de letras\n(Tudo aquilo que eu não disse)\nvira lágrima\ne um poema\n\t\t– até quando?",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Self",
-        "Cinza Escuro"
+        "Cinza Escuro",
+        "Sobre Poesia"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -650,11 +703,12 @@
       "title": "Autocontrole",
       "text": "Autocontrole\n(Ivan Rocha)\n\nEstar com você\ne não desejar te ter\nrequer (mais ou menos)\ntanto autocontrole\nquanto o necessário\npara lapidar\num grão\nde sal\n.",
       "body": "Estar com você\ne não desejar te ter\nrequer (mais ou menos)\ntanto autocontrole\nquanto o necessário\npara lapidar\num grão\nde sal\n.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
         "Amores Imperfeitos",
-        "Curtos"
+        "Curtos",
+        "2013"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -664,10 +718,11 @@
       "title": "Autoestima",
       "text": "Autoestima\n(Ivan Rocha)\n\t\t*para Ana Paula Vilhena\n\nVocê sempre repete\ncom tanta certeza\nque precisa do Sol\n\nque, não raro, esquece\nque já tens\nluz própria.",
       "body": "\t\t*para Ana Paula Vilhena\n\nVocê sempre repete\ncom tanta certeza\nque precisa do Sol\n\nque, não raro, esquece\nque já tens\nluz própria.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
-        "Com dedicatória"
+        "Com dedicatória",
+        "2008"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -677,11 +732,12 @@
       "title": "Azul De Doer Os Olhos",
       "text": "Azul De Doer Os Olhos\n\t\t*para Jana Tomaskova\n(Ivan Rocha)\n\nEsta lua crescente\nem forma de sorriso\nque admiro\n\né a mesma, possivelmente,\nque paira sobre as casas\na dez mil quilômetros do Rio\n\nE este Sol que me cega\ne me faz suar\nno infernal verão tropical\nsentado na areia\nde Copa\n\né o mesmo que usas (no mesmo momento)\npara secar suas roupas\nestendidas no varal\nno quintal de seu apartamento\nno coração da Europa\n\nEstamos sob o mesmo teto\nAzul de doer os olhos\nSeparados, justamente,\npor aquilo que nos une.",
       "body": "\t\t*para Jana Tomaskova\n\nEsta lua crescente\nem forma de sorriso\nque admiro\n\né a mesma, possivelmente,\nque paira sobre as casas\na dez mil quilômetros do Rio\n\nE este Sol que me cega\ne me faz suar\nno infernal verão tropical\nsentado na areia\nde Copa\n\né o mesmo que usas (no mesmo momento)\npara secar suas roupas\nestendidas no varal\nno quintal de seu apartamento\nno coração da Europa\n\nEstamos sob o mesmo teto\nSeparados, justamente,\npor aquilo que nos une.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Amores Imperfeitos",
-        "Com dedicatória"
+        "Com dedicatória",
+        "2012"
       ],
       "compilacoes": [],
       "comentario": ""
@@ -691,8 +747,8 @@
       "title": "Átimo",
       "text": "Átimo\n(Ivan Rocha)\n\nA vida é um átimo\nque insiste\nMas, uma hora, desiste\n\nE entre um repente e outro, existe\num milhão de momentos\npara serem vividos\n(uns coloridos,\noutros cinzentos)\nUm milhão de sentidos\n\nUm milhão de motivos\npara estar vivo\n\nE não hesite em guardar\ncontigo, meu amigo,\nmesmo os dias mais amargos\nporque a vida\né um átimo que não quer passar\nmas, um dia, passa\n\ne não teremos nem isso\n       pra contar.",
       "body": "A vida é um átimo\nque insiste\nMas, uma hora, desiste\n\nE entre um repente e outro, existe\num milhão de momentos\npara serem vividos\n(uns coloridos,\noutros cinzentos)\nUm milhão de sentidos\n\nUm milhão de motivos\npara estar vivo\n\nE não hesite em guardar\ncontigo, meu amigo,\nmesmo os dias mais amargos\nporque a vida\né um átimo que não quer passar\nmas, um dia, passa\n\ne não teremos nem isso\n       pra contar.",
-      "reviewed": false,
-      "favorite": false,
+      "reviewed": true,
+      "favorite": true,
       "tags": [
         "Sobre o Tempo"
       ],
@@ -4380,10 +4436,11 @@
       "title": "As Nuvens e O Ninho (Pedido de Desculpas III)",
       "text": "As Nuvens e O Ninho (Pedido de Desculpas III)\n(Ivan Rocha)\n\nTe conheci de asas quebradas\ncheia de medos e manias\n(e medos e manias, também,\neu tinha)\ne os olhos cansados de chorar\n\nTe dei carinho e abrigo\ndebaixo das minhas\nasas, também quebradas;\nNos curamos juntos\ne voamos pra conhecer o mundo\n\nDe volta ao ninho\neu, passarinho, tão acostumado\na voar sozinho\nagora tinha um lar\n\nMas demorei a realizar:\nAntes de te encontrar\nminha casa era o ar\n\nE hoje não me perdôo\npor ter alçado esse vôo\ne te deixar.",
       "body": "Te conheci de asas quebradas\ncheia de medos e manias\n(e medos e manias, também,\neu tinha)\ne os olhos cansados de chorar\n\nTe dei carinho e abrigo\ndebaixo das minhas\nasas, também quebradas;\nNos curamos juntos\ne voamos pra conhecer o mundo\n\nDe volta ao ninho\neu, passarinho, tão acostumado\na voar sozinho\nagora tinha um lar\n\nMas demorei a realizar:\nAntes de te encontrar\nminha casa era o ar\n\nE hoje não me perdôo\npor ter alçado esse vôo\ne te deixar.",
-      "reviewed": false,
+      "reviewed": true,
       "favorite": false,
       "tags": [
-        "Série"
+        "Série",
+        "2014"
       ],
       "compilacoes": [],
       "comentario": ""
