@@ -33,6 +33,14 @@ except ImportError:
     sys.exit("Instale com:  pip install python-docx")
 
 
+def file_key(name: str) -> str:
+    """Nome de arquivo comparável: minúsculas, sem acento, todo traço vira hífen."""
+    n = sort_key(name or "")
+    n = n.replace("–", "-").replace("—", "-").replace("−", "-")
+    n = re.sub(r"\s+", " ", n)
+    return n.strip()
+
+
 def title_from_name(name: str) -> str:
     """Se o Word não tiver título em negrito, usa o nome do arquivo."""
     n = re.sub(r"\.docx$", "", name, flags=re.I)
@@ -540,7 +548,7 @@ def build_html(poems: list[dict]) -> str:
 </header>
 <nav id="indice">
   <label class="busca-wrap">
-    <input type="search" id="busca" placeholder="Busca por título, tag, compilação ou comentário" autocomplete="off">
+    <input type="search" id="busca" placeholder="Busca por título, texto, tag, compilação ou comentário" autocomplete="off">
   </label>
   <p id="busca-status"></p>
   <div class="chip-row">
@@ -774,7 +782,8 @@ function haystack(art) {{
   const tags = (art.querySelector(".tags") || {{}}).value || "";
   const comp = (art.querySelector(".comp") || {{}}).value || "";
   const note = (art.querySelector(".note") || {{}}).value || "";
-  return fold(title + " " + tags + " " + comp + " " + note + " " + id);
+  const verse = (art.querySelector(".verse") || {{}}).textContent || "";
+  return fold(title + " " + tags + " " + comp + " " + note + " " + verse + " " + id);
 }}
 function poemTags(art) {{
   return splitVals((art.querySelector(".tags") || {{}}).value || "");
@@ -897,19 +906,35 @@ def main() -> None:
     if not files:
         sys.exit(f"Nenhum .docx na raiz de {folder}")
 
-    # Tags/checado do JSON que já existe NESTA pasta (cwd), não da pasta dos .docx.
-    old = {}
-    old_json = Path.cwd() / "poesias.json"
-    if old_json.is_file():
+    # Tags/checado: procura poesias.json no cwd e também na pasta dos .docx.
+    old_by_name = {}
+    old_by_key = {}
+    old_by_title = {}
+    old_json = None
+    for candidate in (Path.cwd() / "poesias.json", folder / "poesias.json"):
+        if candidate.is_file():
+            old_json = candidate
+            break
+    if old_json:
         try:
             prev = json.loads(old_json.read_text(encoding="utf-8"))
             for item in prev.get("poems", []):
-                old[item.get("file_name")] = item
-        except Exception:
-            old = {}
+                fn = item.get("file_name") or ""
+                old_by_name[fn] = item
+                old_by_key[file_key(fn)] = item
+                tk = sort_key(item.get("title") or "")
+                if tk:
+                    old_by_title.setdefault(tk, item)
+            print(f"JSON anterior: {old_json} ({len(old_by_name)} poemas)")
+        except Exception as e:
+            print(f"Não li o JSON anterior ({old_json}): {e}")
+    else:
+        print("ATENÇÃO: nenhum poesias.json encontrado no cwd nem na pasta dos .docx.")
+        print("Sem isso as tags/checado nascem vazios.")
 
     poems = []
     errors = []
+    merged = 0
     for f in files:
         try:
             title, body, body_html = extract_poem(f)
@@ -920,7 +945,14 @@ def main() -> None:
             raw = ""
             body = ""
             body_html = ""
-        prev = old.get(f.name, {})
+        prev = (
+            old_by_name.get(f.name)
+            or old_by_key.get(file_key(f.name))
+            or old_by_title.get(sort_key(title))
+            or {}
+        )
+        if prev.get("tags") or prev.get("reviewed") or prev.get("favorite") or prev.get("compilacoes") or prev.get("comentario"):
+            merged += 1
         poems.append(
             {
                 "file_name": f.name,
@@ -956,6 +988,7 @@ def main() -> None:
     sheets = (pages + 1) // 2
 
     print(f"Arquivos .docx: {len(poems)}")
+    print(f"Metadados reaproveitados: {merged} de {len(poems)}")
     print(f"Erros: {len(errors)}")
     print(f"JSON: {json_path}")
     print(f"HTML: {html_path}")
