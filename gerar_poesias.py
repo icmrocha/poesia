@@ -189,10 +189,10 @@ def body_only(text: str, title: str) -> str:
             rest = _remainder_after_title(s, title)
             if rest is not None:
                 skipped_title = True
-                if rest == "" or _is_dedication(rest):
-                    if rest:
-                        cleaned.append(rest)
+                if _is_dedication(rest):
+                    cleaned.append(rest)
                     continue
+                # Linha igual ao título (ex.: "Camila") é verso — não apaga.
                 cleaned.append(line.rstrip())
                 continue
         if AUTHOR_LINE.match(s):
@@ -222,6 +222,7 @@ def body_only_html(html: str, title: str) -> str:
             if rest is not None:
                 skipped = True
                 if rest == "":
+                    cleaned.append(line.rstrip())
                     continue
                 if _is_dedication(rest):
                     cleaned.append(f"<em>{html_escape(rest)}</em>" if "<em>" not in line else line.rstrip())
@@ -318,7 +319,7 @@ def build_html(poems: list[dict]) -> str:
             f'<div class="meta">\n'
             f'<label><input type="checkbox" class="ck-poem" data-id="{pid}" {rev}> Checado</label>\n'
             f'<label><input type="checkbox" class="ck-fav" data-id="{pid}" {fav}> Favorito</label>\n'
-            f'<label>Tags <input type="text" class="tags" data-id="{pid}" value="{tags_s}"></label>\n'
+            f'<label>Tags <textarea class="tags" data-id="{pid}" rows="3">{tags_s}</textarea></label>\n'
             f'<label>Compilação <input type="text" class="comp" data-id="{pid}" value="{comp_s}"></label>\n'
             f'<label>Comentário <input type="text" class="note" data-id="{pid}" value="{note_s}"></label>\n'
             f'</div>\n'
@@ -493,15 +494,25 @@ def build_html(poems: list[dict]) -> str:
     gap: 6px;
     background: #f3f3f3;
     border-radius: 10px;
-    max-width: 28em;
+    max-width: 36em;
   }}
   .meta label {{
     display: block;
   }}
-  .meta .tags, .meta .comp {{
-    width: 16em;
+  .meta .tags {{
+    display: block;
+    width: 100%;
+    min-height: 3.6em;
+    margin: 4px 0 0;
     font: 10pt Helvetica, Arial, sans-serif;
-    margin-left: 6px;
+    resize: vertical;
+    box-sizing: border-box;
+  }}
+  .meta .comp, .meta .note {{
+    width: 100%;
+    font: 10pt Helvetica, Arial, sans-serif;
+    margin-left: 0;
+    margin-top: 4px;
   }}
   html {{ scroll-behavior: smooth; }}
   header.bar > div:last-child {{
